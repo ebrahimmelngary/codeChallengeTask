@@ -1,13 +1,13 @@
 # codeChallengeTask 
 **Main technologies used**
 ______________________
-
+```
 React Native
 Typescript
 React Navigation (v5)
 Redux Thunk and Prisist
 React Native Testing Library
-
+```
 **Main functionality**
 ______________________
 
