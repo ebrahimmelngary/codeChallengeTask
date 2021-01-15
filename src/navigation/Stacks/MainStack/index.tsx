@@ -3,7 +3,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../../../screens/Home';
 import Favorite from '../../../screens/Favorite';
 import MovieDetails from '../../../screens/MovieDetails';
-import { common_options } from '../options';
+import {common_options} from '../options';
+import {PressedIcon} from '../../../components/atom/AppIcon';
+import navigateToScreen from '../../Navigator';
+import {COLORS, ICONS} from '../../../common';
 
 const MainStackNav = createStackNavigator();
 
@@ -17,14 +20,24 @@ const MainStack: React.FC = () => (
       options={{headerTitle: ''}}
     />
     <MainStackNav.Screen
-      name={'Favorite'}
+      name={'Favroite'}
       component={Favorite}
-      options={{headerTitle: ''}}
+      options={{headerTitle: 'My WishList'}}
     />
-     <MainStackNav.Screen
+    <MainStackNav.Screen
       name={'MovieDetails'}
       component={MovieDetails}
-      options={{headerTitle: ''}}
+      options={{
+        headerTitle: '',
+        headerRight: () => (
+          <PressedIcon
+            color={COLORS.secondary}
+             name={ICONS.heart}
+             size={35}
+            onPress={() => navigateToScreen({name: 'Favroite'})}
+          />
+        ),
+      }}
     />
   </MainStackNav.Navigator>
 );

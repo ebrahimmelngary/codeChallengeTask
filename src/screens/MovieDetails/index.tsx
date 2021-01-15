@@ -1,16 +1,35 @@
 import * as React from 'react';
 import {ImageBackground, View} from 'react-native';
-import { COLORS, ICONS } from '../../common';
-import {  PressedIcon } from '../../components/atom/AppIcon';
+import {useSelector, useDispatch} from 'react-redux';
+import {COLORS, ICONS} from '../../common';
+import {PressedIcon} from '../../components/atom/AppIcon';
 import AppText from '../../components/atom/AppText';
+import {addToWishlist, removeFromWishlist} from '../../redux/actions/WishList';
 import {IMAGE_URL} from '../../services';
 import styles from './styles';
 
-interface FavoriteProps {}
+interface FavoriteProps {
+  route: {};
+}
 
-const Favorite = ({route}: FavoriteProps) => {
+const Favorite: React.FC<FavoriteProps> = ({route}: FavoriteProps) => {
   const {item} = route?.params;
-  console.log('id', item);
+  const dispatch = useDispatch();
+  const wishList = useSelector(
+    (state: {wishList: {myWishList: []}}) => state.wishList?.myWishlist,
+  );
+  const exist = wishList?.findIndex((i: { id: any; }) => i.id === item.id) !== -1;
+
+  const onPressBookmark = () => {
+    if (exist) {
+      dispatch(removeFromWishlist(item.id));
+      global.toast.show('Movie removed from wishlist');
+      
+    } else {
+      dispatch(addToWishlist(item));
+      global.toast.show('Movie added to wishlist');
+    }
+  };
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -18,10 +37,21 @@ const Favorite = ({route}: FavoriteProps) => {
         resizeMode={'contain'}
         source={{uri: `${IMAGE_URL}${item.poster_path}`}}
       />
-      <PressedIcon onPress={()=>{}} name={ICONS.heart} style={styles.icon} size={30} color={COLORS.red}/>
-      <AppText style={styles.nameText}>{item.title}</AppText>
-      <AppText style={styles.detailsText}>{item.overview}</AppText>
-
+      <PressedIcon
+        onPress={onPressBookmark}
+        name={ICONS.heart}
+        style={styles.icon}
+        size={30}
+        color={exist ? COLORS.red : COLORS.gray}
+      />
+      <View style={styles.innerContainer}>
+        <AppText style={styles.nameText}>{item.title}</AppText>
+        <AppText>{`Date : ${item.release_date}`}</AppText>
+        <AppText>{`Vote Average : ${item.vote_average}`}</AppText>
+        <AppText>{`Votes : ${item.vote_count}`}</AppText>
+        <AppText>{`Language : ${item.original_language}`}</AppText>
+        <AppText style={styles.detailsText}>{item.overview}</AppText>
+      </View>
     </View>
   );
 };

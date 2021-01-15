@@ -1,16 +1,25 @@
 import * as React from 'react';
-import { Text, View,  } from 'react-native';
+import { FlatList, View } from 'react-native';
+import { useSelector } from 'react-redux';
+import MovieCard from '../../components/molecules/MovieCard';
+import navigateToScreen from '../../navigation/Navigator';
+import styles from './styles';
 
-interface MovieDetailsProps {}
 
-const MovieDetails = ({}: MovieDetailsProps) => {
+const Favroite = () => {
+  const wishList = useSelector(
+    (state: { wishList: { myWishList: [] } }) => state.wishList?.myWishlist,
+  );
+
   return (
     <View style={styles.container}>
-      <Text>MovieDetails</Text>
+      <FlatList
+        data={wishList}
+        renderItem={({ item }) => <MovieCard item={item} onPress={() => navigateToScreen({ name: 'MovieDetails', params: item })} />}
+        keyExtractor={(item, index) => item + index.toString()}
+      />
     </View>
   );
 };
 
-export default React.memo(MovieDetails);
-
-
+export default React.memo(Favroite);

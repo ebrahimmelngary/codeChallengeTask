@@ -12,7 +12,6 @@ const Home = () => {
   const dispatch = useDispatch();
 const searchData = useSelector(state=>state.searchData.data)
   const [searchText, setSearchText] = React.useState('');
-console.log('searchData',searchData)
   return (
     <View style={styles.container}>
       <SearchBox

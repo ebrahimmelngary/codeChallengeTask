@@ -1,9 +1,6 @@
 import {
-  makeDeleteRequest,
   makeGetRequest,
-  makePostRequest,
 } from '../../../services';
-import { wishListSelector } from '../../selectors';
 import {
   MAKE_SEARCH,
   SET_USER_WISH_LIST,
@@ -19,7 +16,6 @@ export const fetchSearchData = (searchText: string) => async (
     const response = await makeGetRequest({
       url: `/search/movie?api_key=9018c0016456ae9118794dd5bffa958a&language=en-US&page=1&include_adult=false&query=${searchText.toLowerCase()}`,
     });
-    console.log('res', response);
     if (response.status === 200) {
       dispatch({ type: STOP_LOADING });
       dispatch({ type: MAKE_SEARCH, payload: { data: response.data.results } });
