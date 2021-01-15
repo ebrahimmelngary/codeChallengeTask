@@ -6,7 +6,7 @@ export default StyleSheet.create({
     container: {
         flex: 1,
     },
-    innerContainer:{
+    innerContainer: {
 
         paddingHorizontal: calcWidth(15),
     },
@@ -17,15 +17,14 @@ export default StyleSheet.create({
     },
     nameText: {
         fontSize: calcFont(20),
-        marginBottom:calcHeight(10),
+        marginBottom: calcHeight(10),
     },
     detailsText: {
         paddingVertical: calcHeight(15),
     },
-    icon:{
-        position:'absolute',
-        right:calcWidth(30),
-        top:calcHeight(-30),
-        zIndex:10
+    icon: {
+
+        marginHorizontal: calcWidth(20)
+
     }
 });
