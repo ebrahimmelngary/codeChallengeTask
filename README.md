@@ -43,8 +43,7 @@ run yarn run test to run all unit test suites.
 
 **Used dependencies**
 ________________________
-```
-    "@react-native-community/async-storage": "^1.12.1",
+`   "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-community/netinfo": "^5.9.10",
     "@react-navigation/native": "^5.8.10",
@@ -65,8 +64,18 @@ ________________________
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0" 
-    ```
-
+    `
+______________________________
 
 Also I am using eslint and prettier for better code formatting alongside husky hooks to apply linting and formatting before each commit
+
+**Android ScreenShoot**
+[
+![WhatsApp Image 2021-01-15 at 12 20 49 PM (1)](https://user-images.githubusercontent.com/26544537/104726213-eb760780-573b-11eb-84ed-ef33689cc5ab.jpeg)
+![WhatsApp Image 2021-01-15 at 12 20 49 PM (2)](https://user-images.githubusercontent.com/26544537/104726215-ed3fcb00-573b-11eb-81f0-7e00285862b9.jpeg)
+![WhatsApp Image 2021-01-15 at 12 20 49 PM (3)](https://user-images.githubusercontent.com/26544537/104726218-ee70f800-573b-11eb-91cc-bfe5b49c59e6.jpeg)
+](url)
+
+______________
+**Ios ScreenShoot **
 
