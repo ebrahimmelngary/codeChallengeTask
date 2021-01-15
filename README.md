@@ -79,3 +79,6 @@ Also I am using eslint and prettier for better code formatting alongside husky h
 ______________
 **Ios ScreenShoot **
 
+![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 08](https://user-images.githubusercontent.com/26544537/104726602-9090e000-573c-11eb-894f-c5259734a868.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 14](https://user-images.githubusercontent.com/26544537/104726606-925aa380-573c-11eb-9d65-66a55e6a3d0d.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 31](https://user-images.githubusercontent.com/26544537/104726608-94246700-573c-11eb-884b-cf39d458429d.png)
