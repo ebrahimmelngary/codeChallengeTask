@@ -74,14 +74,14 @@ ______________________________
 Also I am using eslint and prettier for better code formatting alongside husky hooks to apply linting and formatting before each commit
 
 **Android ScreenShoot**
-[
-![WhatsApp Image 2021-01-15 at 12 20 49 PM (1)](https://user-images.githubusercontent.com/26544537/104726213-eb760780-573b-11eb-84ed-ef33689cc5ab.jpeg)
-![WhatsApp Image 2021-01-15 at 12 20 49 PM (2)](https://user-images.githubusercontent.com/26544537/104726215-ed3fcb00-573b-11eb-81f0-7e00285862b9.jpeg)
-![WhatsApp Image 2021-01-15 at 12 20 49 PM (3)](https://user-images.githubusercontent.com/26544537/104726218-ee70f800-573b-11eb-91cc-bfe5b49c59e6.jpeg)
-](url)
+_______________
+[![WhatsApp Image 2021-01-15 at 12 20 49 PM (1)](https://user-images.githubusercontent.com/26544537/104726213-eb760780-573b-11eb-84ed-ef33689cc5ab.jpeg)|
+![WhatsApp Image 2021-01-15 at 12 20 49 PM (2)](https://user-images.githubusercontent.com/26544537/104726215-ed3fcb00-573b-11eb-81f0-7e00285862b9.jpeg)|
+![WhatsApp Image 2021-01-15 at 12 20 49 PM (3)](https://user-images.githubusercontent.com/26544537/104726218-ee70f800-573b-11eb-91cc-bfe5b49c59e6.jpeg)](url)
 
 ______________
-** Ios ScreenShoot **
+**Ios ScreenShoot**
+____________________________
 
 ![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 08](https://user-images.githubusercontent.com/26544537/104726602-9090e000-573c-11eb-894f-c5259734a868.png)
 ![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 14](https://user-images.githubusercontent.com/26544537/104726606-925aa380-573c-11eb-9d65-66a55e6a3d0d.png)
