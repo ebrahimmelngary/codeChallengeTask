@@ -1,5 +1,5 @@
 import React from 'react';
-import Toast from 'react-native-easy-toast'
+import Toast from 'react-native-easy-toast';
 import styles from './styles';
 
 const Toaster = () => (

@@ -16,13 +16,13 @@ export const STYLES = StyleSheet.create({
     justifyContent: 'center',
   },
   shadow: {
-    shadowColor: COLORS.black,
+    shadowColor: COLORS.secondary,
     shadowOffset: {
       width: 0,
-      height: 5,
+      height: 0,
     },
     shadowOpacity: 0.5,
-    shadowRadius: 6,
+    shadowRadius: 1,
     elevation: 1,
   },
 });

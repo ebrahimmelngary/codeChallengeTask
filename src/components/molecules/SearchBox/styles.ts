@@ -12,7 +12,6 @@ export default StyleSheet.create({
     paddingRight:calcWidth(11),
     backgroundColor: COLORS.white,
     marginHorizontal: calcWidth(16),
-    marginTop:calcHeight(40),
   },
   textInputStyle: {
     flex: 1,

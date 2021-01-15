@@ -1,4 +1,5 @@
 export const ICONS = {
- search:'',
- heart:'',
+ search:'magnify',
+ heart:'heart',
+ arrow:'chevron-right',
 };

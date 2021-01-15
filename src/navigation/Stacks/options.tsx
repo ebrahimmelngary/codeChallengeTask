@@ -1,7 +1,7 @@
 import {StackNavigationOptions} from '@react-navigation/stack';
-import {METRICS} from '../common';
 import React from 'react';
 import {View} from 'react-native';
+import { METRICS } from '../../common';
 
 export const common_options: StackNavigationOptions = {
   // headerTintColor: COLORS.white,

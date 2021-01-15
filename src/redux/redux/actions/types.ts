@@ -1,1 +1,0 @@
-export const APPLY_LANGUAGE = 'APPLY_LANGUAGE';

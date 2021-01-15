@@ -5,16 +5,16 @@ interface NavigationData {
 
 type Screens =
   | {
-    name: 'Home';
-  }
+      name: 'Home';
+    }
   | {
-    name: 'Favroite';
-  }
+      name: 'Favroite';
+    }
   | {
-    name: 'MovieDetails';
-    params?: {
-      id?: Number;
+      name: 'MovieDetails';
+      params?: {
+        item?: {};
+      };
     };
-  };
 
-export type { NavigationData, Screens };
+export type {NavigationData, Screens};

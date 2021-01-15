@@ -4,9 +4,7 @@ import {
   NavigationContainerRef,
 } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import DrawerNavigation from './DrawerNavigation';
-import {AppearanceProvider, useColorScheme} from 'react-native-appearance';
-import {darkColors, lightColors} from '../common/ThemeColors';
+import MainStack from './Stacks/MainStack';
 
 export const navigationRef: React.RefObject<NavigationContainerRef> = React.createRef();
 
@@ -17,21 +15,16 @@ const RootNavigation = () => {
     <RootStack.Navigator
       headerMode="none"
       screenOptions={{animationEnabled: false}}>
-      <RootStack.Screen name="DrawerNavigation" component={DrawerNavigation} />
+      <RootStack.Screen name="Main" component={MainStack} />
     </RootStack.Navigator>
   );
 };
 
 const Navigation: React.FC = () => {
-  const scheme = useColorScheme();
   return (
-    <AppearanceProvider>
-      <NavigationContainer
-        ref={navigationRef}
-        theme={scheme === 'dark' ? darkColors : lightColors}>
+      <NavigationContainer ref={navigationRef}>
         <RootNavigation />
       </NavigationContainer>
-    </AppearanceProvider>
   );
 };
 export default Navigation;

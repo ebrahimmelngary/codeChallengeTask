@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {FlatList, View, TouchableOpacity, Image} from 'react-native';
 import {IMAGES} from '../../../common';
-import {Trans} from '../../../i18n';
 import navigateToScreen from '../../../navigation/Navigator';
 import AppText from '../../atoms/AppText';
 import styles from './styles';
@@ -32,9 +31,8 @@ const ItemCard: React.FC<ItemCardProps> = ({item, onPress}: ItemCardProps) => {
           <AppText numberOfLines={1} style={styles.itemCardNameText}>
             {item.name}
           </AppText>
-          <AppText style={styles.itemCardPriceText}>{`${
-            item.price
-          }${' '}${Trans('egp')}`}</AppText>
+          <AppText style={styles.itemCardPriceText}>{
+            item.price}</AppText>
         </View>
         <AppText numberOfLines={1} style={styles.itemCardDetailsText}>
           {item.details}

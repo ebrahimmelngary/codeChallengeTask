@@ -7,16 +7,16 @@ import {
   ViewStyle,
 } from 'react-native';
 import {COLORS, ICONS} from '../../../common';
-import { Trans } from '../../../i18n';
 import {calcFont} from '../../../utils';
-import {PressedIcon} from '../../atoms/AppIcon';
+import {PressedIcon} from '../../atom/AppIcon';
 import styles from './styles';
 
 interface SearchBoxProps {
   containerStyle?: ViewStyle;
-  onPressSearch: () => void;
-  isNavigateToSearch: boolean;
-  onPress: () => void;
+  onPressSearch?: () => void;
+  isNavigateToSearch?: boolean;
+  onPress?: () => void;
+  value: String;
 }
 
 type Props = SearchBoxProps & TextInputProps;
@@ -25,6 +25,7 @@ const SearchBox: React.FC<Props> = ({
   onPressSearch,
   isNavigateToSearch,
   onPress,
+  value,
   ...props
 }: Props) => {
   return (
@@ -39,9 +40,11 @@ const SearchBox: React.FC<Props> = ({
         )}
         <TextInput
           {...props}
-          placeholder={Trans('search')}
+          testID="SearchBox"
+          placeholder={'Search'}
           placeholderTextColor={COLORS.serach}
           style={styles.textInputStyle}
+          value={value}
         />
         <PressedIcon
           disabled={isNavigateToSearch}

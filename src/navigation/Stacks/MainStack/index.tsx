@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {common_options} from '../../options';
 import Home from '../../../screens/Home';
 import Favorite from '../../../screens/Favorite';
 import MovieDetails from '../../../screens/MovieDetails';
+import { common_options } from '../options';
 
 const MainStackNav = createStackNavigator();
 
