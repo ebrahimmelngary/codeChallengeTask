@@ -36,9 +36,13 @@ in *IOS*
 You will need to make one more step to install pods dependencies, run the following command in the project directory:
 
 cd ios && pod install
-Run on Device
+
+**Run on Device**
+
 run yarn android or yarn ios to run on device or emulator.
-Run Unit Test
+
+**Run Unit Test**
+
 run yarn run test to run all unit test suites.
 
 **Used dependencies**
@@ -77,7 +81,7 @@ Also I am using eslint and prettier for better code formatting alongside husky h
 ](url)
 
 ______________
-**Ios ScreenShoot **
+** Ios ScreenShoot **
 
 ![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 08](https://user-images.githubusercontent.com/26544537/104726602-9090e000-573c-11eb-894f-c5259734a868.png)
 ![Simulator Screen Shot - iPhone 11 - 2021-01-15 at 12 22 14](https://user-images.githubusercontent.com/26544537/104726606-925aa380-573c-11eb-9d65-66a55e6a3d0d.png)
