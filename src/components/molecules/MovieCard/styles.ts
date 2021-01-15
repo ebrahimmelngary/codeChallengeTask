@@ -9,7 +9,8 @@ export default StyleSheet.create({
     backgroundColor: COLORS.white,
     padding: calcWidth(20),
     marginBottom: calcWidth(5),
-    borderRadius: 10,
+    borderRadius: calcWidth(10),
+    marginHorizontal:calcWidth(15),
     ...STYLES.shadow,
   },
   image: {

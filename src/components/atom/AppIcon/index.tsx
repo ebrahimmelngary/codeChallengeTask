@@ -9,13 +9,6 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { IconButtonProps } from 'react-native-vector-icons/Icon';
 
-/**
- * Thne next three lines is reqired when we UX export icons as svg
- */
-// import {createIconSetFromIcoMoon} from 'react-native-vector-icons';
-// import icoMoonConfig from '../../../assets/fonts/icomoon/selection.json';
-// const Icomoon = createIconSetFromIcoMoon(icoMoonConfig);
-
 const AppIcon: React.FC<IconButtonProps> = (props: IconButtonProps) => (
   <Icon {...props} style={[styles.icon, props.style]} />
 );
