@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { IconButtonProps } from 'react-native-vector-icons/Icon';
+import { COLORS } from '../../../common';
 
 const AppIcon: React.FC<IconButtonProps> = (props: IconButtonProps) => (
   <Icon {...props} style={[styles.icon, props.style]} />
@@ -36,7 +37,7 @@ const PressedIcon: React.FC<Props> = ({
       style={[opacity_style, containerStyle]}
       activeOpacity={0.7}
       disabled={disabled}>
-      <AppIcon {...props} name={name} size={size} color={color} />
+      <AppIcon {...props} name={name} size={size || 25} color={color || COLORS.white} />
     </TouchableOpacity>
   );
 };

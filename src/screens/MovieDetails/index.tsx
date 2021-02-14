@@ -1,30 +1,29 @@
 import * as React from 'react';
-import { ImageBackground, ScrollView, View } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import { COLORS, ICONS } from '../../common';
-import { PressedIcon } from '../../components/atom/AppIcon';
+import {ImageBackground, ScrollView, View} from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
+import {COLORS, ICONS} from '../../common';
+import {PressedIcon} from '../../components/atom/AppIcon';
 import AppText from '../../components/atom/AppText';
-import { addToWishlist, removeFromWishlist } from '../../redux/actions/WishList';
-import { IMAGE_URL } from '../../services';
+import { addToWishlist, removeFromWishlist } from '../../redux/actions/wishList';
+import {IMAGE_URL} from '../../services';
 import styles from './styles';
 
 interface FavoriteProps {
   route: {};
 }
 
-const Favorite: React.FC<FavoriteProps> = ({ route }: FavoriteProps) => {
-  const { item } = route?.params;
+const Favorite: React.FC<FavoriteProps> = ({route}: FavoriteProps) => {
+  const {item} = route?.params;
   const dispatch = useDispatch();
   const wishList = useSelector(
-    (state: { wishList: { myWishList: [] } }) => state.wishList?.myWishlist,
+    (state: {wishList: {myWishList: []}}) => state.wishList?.myWishlist,
   );
-  const exist = wishList?.findIndex((i: { id: any; }) => i.id === item.id) !== -1;
+  const exist = wishList?.findIndex((i: {id: any}) => i.id === item.id) !== -1;
 
   const onPressBookmark = () => {
     if (exist) {
       dispatch(removeFromWishlist(item.id));
       global.toast.show('Movie removed from wishlist');
-
     } else {
       dispatch(addToWishlist(item));
       global.toast.show('Movie added to wishlist');
@@ -35,8 +34,7 @@ const Favorite: React.FC<FavoriteProps> = ({ route }: FavoriteProps) => {
       <ImageBackground
         style={styles.imageContainer}
         resizeMode={'contain'}
-        source={{ uri: `${IMAGE_URL}${item.poster_path}` }}
-      >
+        source={{uri: `${IMAGE_URL}${item.poster_path}`}}>
         <PressedIcon
           onPress={onPressBookmark}
           name={ICONS.heart}

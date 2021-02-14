@@ -15,4 +15,5 @@ export const COLORS = {
   checkBox: '#131F34',
   serach:'#131F34',
   arrow:'#707070',
+  blue:'rgb(0,109,178)'
 };
