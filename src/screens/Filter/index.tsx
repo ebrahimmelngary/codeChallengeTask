@@ -70,21 +70,21 @@ const Filter = () => {
               <Collapsible title={'Brand'}>
                 <VerticalList
                   data={filterData.brand}
-                  selected={state.buy}
+                  selected={state.brand}
                   onPress={(item) => setState({brand: item.name})}
                 />
               </Collapsible>
               <Collapsible title={'Matrial'}>
                 <VerticalList
                   data={filterData.material}
-                  selected={state.buy}
+                  selected={state.matrial}
                   onPress={(item) => setState({matrial: item.name})}
                 />
               </Collapsible>
               <Collapsible title={'Size'}>
                 <HorizontalList
                   data={filterData.sizes}
-                  selected={state.buy}
+                  selected={state.size}
                   onPress={(item) => setState({size: item.name})}
                 />
               </Collapsible>
