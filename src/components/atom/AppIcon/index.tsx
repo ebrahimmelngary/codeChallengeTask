@@ -7,11 +7,16 @@ import {
   ViewStyle,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { IconButtonProps } from 'react-native-vector-icons/Icon';
-import { COLORS } from '../../../common';
+import {IconButtonProps} from 'react-native-vector-icons/Icon';
+import {COLORS} from '../../../common';
 
 const AppIcon: React.FC<IconButtonProps> = (props: IconButtonProps) => (
-  <Icon {...props} style={[styles.icon, props.style]} />
+  <Icon
+    {...props}
+    style={[styles.icon, props.style]}
+    size={25}
+    color={COLORS.white}
+  />
 );
 
 interface PressedIconProps {
@@ -29,7 +34,7 @@ const PressedIcon: React.FC<Props> = ({
   disabled,
   ...props
 }: Props) => {
-  const opacity_style = { opacity: disabled ? 0.6 : 1 };
+  const opacity_style = {opacity: disabled ? 0.6 : 1};
   return (
     <TouchableOpacity
       {...props}
@@ -37,15 +42,20 @@ const PressedIcon: React.FC<Props> = ({
       style={[opacity_style, containerStyle]}
       activeOpacity={0.7}
       disabled={disabled}>
-      <AppIcon {...props} name={name} size={size || 25} color={color || COLORS.white} />
+      <AppIcon
+        {...props}
+        name={name}
+        size={size || 25}
+        color={color || COLORS.white}
+      />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   icon: {
-    transform: [{ rotateY: I18nManager.isRTL ? '180deg' : '0deg' }],
+    transform: [{rotateY: I18nManager.isRTL ? '180deg' : '0deg'}],
   },
 });
 
-export { AppIcon, PressedIcon };
+export {AppIcon, PressedIcon};

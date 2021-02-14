@@ -7,4 +7,5 @@ export const ICONS = {
   upArrow: 'chevron-up',
   checkBox: 'checkbox-blank-outline',
   checkboxMarked: 'checkbox-marked',
+  check:'check',
 };

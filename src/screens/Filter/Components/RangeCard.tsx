@@ -5,7 +5,7 @@ import {COLORS} from '../../../common';
 import AppText from '../../../components/atom/AppText';
 import {calcHeight, calcWidth} from '../../../utils';
 
-const RangeCard = () => {
+const RangeCard = ({min,max}) => {
   const [low, setLow] = React.useState(0);
   const [high, setHigh] = React.useState(0);
 
@@ -17,8 +17,8 @@ const RangeCard = () => {
     <View style={styles.container}>
       <RangeSlider
         style={styles.slider}
-        min={0}
-        max={100}
+        min={min}
+        max={max}
         floatingLabel
         step={1}
         selectionColor={COLORS.white}

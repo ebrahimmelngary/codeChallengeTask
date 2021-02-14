@@ -8,7 +8,6 @@ export default StyleSheet.create({
     alignSelf: 'center',
     borderColor: COLORS.white,
     paddingBottom: 10,
-  
   },
   container: {
     height: calcHeight(50),
